@@ -1,0 +1,214 @@
+/* --- CSS Variables for easy theme management --- */
+:root {
+    --bg-dark-primary: #111827; /* bg-gray-900 */
+    --bg-dark-secondary: #1f2937; /* bg-gray-800 */
+    --bg-dark-tertiary: #374151; /* bg-gray-700 */
+    --border-color: #4b5563; /* border-gray-700 */
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db; /* text-gray-300 */
+    --text-tertiary: #9ca3af; /* text-gray-400 */
+    --accent-color: #22d3ee; /* cyan-400 */
+    --accent-color-hover: #06b6d4; /* cyan-500 */
+    --success-color: #4ade80; /* green-400 */
+    --error-color: #f87171; /* red-500 */
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --error-border: #b91c1c; /* red-700 */
+}
+
+/* --- General Body and App Container Styling --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    background-color: var(--bg-dark-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 448px; /* max-w-md */
+    margin: 0 auto;
+}
+
+/* --- Card Styling --- */
+.card {
+    background-color: var(--bg-dark-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+}
+
+/* --- Header --- */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.header p {
+    color: var(--text-tertiary);
+    margin-top: 0.5rem;
+}
+
+/* --- File Upload Section --- */
+.file-upload-section {
+    margin-bottom: 1.5rem;
+}
+
+.file-upload-label {
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--bg-dark-tertiary);
+    border: 2px dashed var(--border-color);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: #4b5563; /* bg-gray-600 */
+}
+
+.upload-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+}
+
+.upload-text {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.upload-hint {
+    font-size: 0.75rem;
+    color: #6b7280; /* text-gray-500 */
+    margin-top: 0.25rem;
+}
+
+.file-input {
+    display: none; /* hidden */
+}
+
+.file-name {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 0.75rem;
+}
+
+.file-name span {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* --- Button Styling --- */
+.predict-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.predict-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color-hover);
+    color: var(--text-primary);
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.predict-button:hover {
+    background-color: #0891b2; /* cyan-600 */
+    transform: scale(1.05);
+}
+
+.predict-button:disabled {
+    background-color: #4b5563; /* disabled:bg-gray-600 */
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Results Section --- */
+.results-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.error-box {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.error-box .error-title {
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.prediction-box {
+    background-color: var(--bg-dark-tertiary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.prediction-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.prediction-result {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800;
+    margin: 0;
+}
+
+.prediction-result-ai {
+    color: var(--error-color);
+}
+
+.prediction-result-human {
+    color: var(--success-color);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #4b5563; /* text-gray-600 */
+    margin-top: 1.5rem;
+}

@@ -46,9 +46,9 @@ svm_clf.fit(X_train,y_train)
 lr = LogisticRegression(max_iter=1500)
 lr.fit(X_train,y_train)
 
-#joblib.dump(clf,"Saved Model/Random_forest.pkl")
-#joblib.dump(svm_clf,"Saved Model/SVM.pkl")
-#joblib.dump(clf,"Saved Model/LogisticREg.pkl")
+# joblib.dump(clf,"Saved Model/Random_forest.pkl")
+# joblib.dump(svm_clf,"Saved Model/SVM.pkl")
+# joblib.dump(clf,"Saved Model/LogisticREg.pkl")
 
 # pca=PCA(n_components=2)
 # X_pca=pca.fit_transform(X_test)
